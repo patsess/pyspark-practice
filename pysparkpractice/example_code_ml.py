@@ -42,9 +42,13 @@ if __name__ == '__main__':
 
     # What version of Spark?
     print(spark.version)
+    # note: spark version was 2.4.2 for the course
 
-    # Terminate the cluster
-    spark.stop()
+    # Terminate the cluster (i.e. close connection to Spark)
+    spark.stop()  # good practice to stop the connection
+    # note: Once you are finished with the cluster, it's a good idea to shut
+    # it down, which will free up its resources, making them available for
+    # other processes.
 
     #########################################################################
     # Read data from CSV file
